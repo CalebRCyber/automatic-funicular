@@ -3,26 +3,45 @@
 <head>
 
      <style> 
-    {
+    #container {
   display: grid;
-  grid-template-columns: 30% 70%
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 30% 70%;
+  min-height: 100vh;
 }
 
-#left 
-{
-  background-color:lightyellow  
-}
-#main
-{
-  background-color:lightgray;
-  height:200px;
-}
-
-header, footer 
-{
+header, footer {
+  grid-column: span 2;
+  text-align: center;
+  padding: 10px;
   background: yellowgreen;
-  height:50px
-}       
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: yellowgreen;
+}
+
+footer {
+  margin-top: auto;
+}
     </style>
 
             
@@ -38,21 +57,21 @@ header, footer
         
         <h1>IT 3203 Web Project on Project Milestone</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="assets/topic1.html">Topic 1: APIs in Web Application Security</a></li>
-                <li><a href="assets/topic2.html">Topic 2: Firewalls in Web Application Security</a></li>
-                <li><a href="assets/resources.html">References</a></li>
-                          <p style="white-space: pre;"></p>
-
-            </ul>
-        </nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="assets/topic1.html">Topic 1: APIs in Web Application Security</a></li>
+        <li><a href="assets/topic2.html">Topic 2: Firewalls in Web Application Security</a></li>
+        <li><a href="assets/resources.html">References</a></li>
+    </ul>
+</nav>
+         
     </header>
 
     <section>
 
-<p style="white-space: pre;">.</p>
-
+section {
+  padding: 20px;
+}
 
         <h2>Executive Summary</h2>
          <p style="white-space: pre;"></p>
@@ -75,22 +94,20 @@ header, footer
         </ul>
 
         <h3>Table of Contents</h3>
-        <ul>
-            <li>
-                <a href="assets/topic1.html">Topic 1: APIs in Web Application Security>Topic 1: APIs in Web Application Security</a>
-                <p>This is an in-depth examination regarding APIs in web security </p>
-            </li>
-            <li>
-                <a href="assets/topic2.html">Topic 2: Firewalls in Web Application Security</a>
-                <p>An in-depth analysis of how firewalls protect web applications from cyber threats.</p>
-            </li>
-            <li>
-                <a href="assets/resources.html">References</a>
-
-                <a href="https://www.w3schools.com/js/js_api_intro.asp">Topic 1: APIs in Web Application Security</a>
-                <p>This W3Schools article provides reliable information on web application security through API implementation.</p>
-            </li>
-        </ul>
+        <h3>Table of Contents</h3>
+<ul>
+    <li>
+        <a href="assets/topic1.html">Topic 1: APIs in Web Application Security</a>
+        <p>An in-depth examination of APIs in web security.</p>
+    </li>
+    <li>
+        <a href="assets/topic2.html">Topic 2: Firewalls in Web Application Security</a>
+        <p>Analysis of how firewalls protect web applications.</p>
+    </li>
+    <li>
+        <a href="assets/resources.html">References</a>
+    </li>
+</ul>
     </section>
 
     <footer>
