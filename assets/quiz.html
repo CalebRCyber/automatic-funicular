@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Web Application Security</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Web Application Security Quiz</h1>
+
+    <form id="quiz-form">
+        <!-- Question 1: Multiple Choice (Single Answer) -->
+        <fieldset>
+            <legend>1. What is the primary purpose of a web application firewall (WAF)?</legend>
+            <input type="radio" id="q1a" name="q1" value="0">
+            <label for="q1a">To encrypt user data</label><br>
+            <input type="radio" id="q1b" name="q1" value="1">
+            <label for="q1b">To prevent unauthorized access to web applications</label><br>
+            <input type="radio" id="q1c" name="q1" value="0">
+            <label for="q1c">To detect malware in web applications</label><br>
+            <input type="radio" id="q1d" name="q1" value="0">
+            <label for="q1d">To monitor server performance</label><br>
+        </fieldset>
+
+        <!-- Question 2: Multiple Choice with Multiple Answers -->
+        <fieldset>
+            <legend>2. Which of the following are types of attacks that web applications are vulnerable to?</legend>
+            <input type="checkbox" id="q2a" name="q2" value="1">
+            <label for="q2a">SQL Injection</label><br>
+            <input type="checkbox" id="q2b" name="q2" value="0">
+            <label for="q2b">Man-in-the-middle attack</label><br>
+            <input type="checkbox" id="q2c" name="q2" value="1">
+            <label for="q2c">Cross-Site Scripting (XSS)</label><br>
+            <input type="checkbox" id="q2d" name="q2" value="1">
+            <label for="q2d">Cross-Site Request Forgery (CSRF)</label><br>
+        </fieldset>
+
+        <!-- Question 3: Fill-in-the-Blank -->
+        <fieldset>
+            <legend>3. The process of ensuring that only authenticated and authorized users can access a web application is called ____________.</legend>
+            <input type="text" id="q3" name="q3" placeholder="Type your answer here">
+        </fieldset>
+
+        <br>
+        <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+    </form>
+
+    <div id="result"></div>
+    <button onclick="resetQuiz()">Restart Quiz</button>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
 
