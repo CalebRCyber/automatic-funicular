@@ -3,7 +3,7 @@ function checkAnswers() {
     const totalQuestions = 3;
     let resultMessage = "Your Results:<br>";
 
-    // Question 1 (Multiple Choice)
+    // Question 1 (This is my first question that I need to remember the code)
     if (document.getElementById('q1b').checked) {
         score++;
         resultMessage += "Q1: Correct<br>";
@@ -11,7 +11,7 @@ function checkAnswers() {
         resultMessage += "Q1: Incorrect<br>";
     }
 
-    // Question 2 (Multiple Choice with Multiple Answers)
+    // Question 2 deals with web application security and is composed of gettters)
     let q2Score = 0;
     if (document.getElementById('q2a').checked) q2Score++;
     if (document.getElementById('q2c').checked) q2Score++;
@@ -23,7 +23,7 @@ function checkAnswers() {
         resultMessage += "Q2: Incorrect<br>";
     }
 
-    // Question 3 (Fill-in-the-Blank)
+    // ( This is the fill in the blank code that runs the quiz questions for question 3)
     const q3Answer = document.getElementById('q3').value.trim().toLowerCase();
     if (q3Answer === "authorization") {
         score++;
@@ -32,7 +32,7 @@ function checkAnswers() {
         resultMessage += "Q3: Incorrect<br>";
     }
 
-    // Show the total score and pass/fail result
+    // This code is designated to show whether particpant passed or failed 
     resultMessage += `<br><strong>Your total score: ${score} out of ${totalQuestions}</strong><br>`;
     if (score >= 2) {
         resultMessage += "You are so smart and have passed this quiz!<br>";
