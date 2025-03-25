@@ -1,51 +1,76 @@
 /* General Page Styling */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    box-sizing: border-box; /* Added for consistent sizing */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ff9800; /* Orange from quiz.html for consistency */
+    color: #333; /* Dark text for readability */
+    line-height: 1.6; /* Improved readability */
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Keeps footer at bottom */
 }
 
 /* Grid Layout */
 #container {
     display: grid;
-    grid-template-rows: auto 1fr auto;
-    max-width: 900px;
-    margin: auto;
+    grid-template-rows: auto 1fr auto; /* Header, main, footer */
+    max-width: 1000px; /* Slightly wider for better content fit */
+    margin: 1rem auto; /* Centered with spacing */
     background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow tweak */
+    border-radius: 8px; /* Rounded corners for modern look */
 }
 
 /* Header Styling */
 header {
-    background: yellowgreen;
+    background: yellowgreen; /* Kept your color */
     text-align: center;
-    padding: 15px;
+    padding: 2rem; /* More padding for prominence */
+    border-bottom: 2px solid #333; /* Visual separation */
 }
 
-/* Navigation Menu */
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header h1:nth-child(2) {
+    color: blue; /* From your inline style */
+}
+
+header p {
+    color: red; /* From your inline style */
+    font-size: 1.2rem;
+}
+
+/* Navigation Menu - Consistent across pages */
+nav {
+    background-color: #333; /* Moved from ul to nav for full coverage */
+    padding: 1rem 0; /* Vertical padding */
+}
+
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
-    background-color: #333;
+    flex-wrap: wrap; /* Wraps on smaller screens */
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 1rem; /* Adjusted spacing */
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    padding: 10px;
+    padding: 0.75rem 1rem; /* Slightly larger clickable area */
     display: inline-block;
+    font-weight: bold; /* Bolder links */
 }
 
 nav ul li a:hover {
@@ -55,14 +80,131 @@ nav ul li a:hover {
 
 /* Main Section */
 section {
-    padding: 20px;
+    padding: 2rem; /* Consistent padding */
+}
+
+section img {
+    max-width: 100%; /* Responsive image */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+section h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+section p {
+    margin-bottom: 1rem;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray for readability */
+}
+
+/* Table of Contents List */
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section ul li {
+    margin-bottom: 1rem;
+}
+
+section ul a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section ul a:hover {
+    color: yellowgreen; /* Matches nav hover */
 }
 
 /* Footer */
 footer {
     background: yellowgreen;
     text-align: center;
-    padding: 10px;
-    margin-top: auto;
+    padding: 1rem;
+    margin-top: auto; /* Sticks to bottom */
+    border-top: 2px solid #333; /* Visual separation */
 }
 
+/* Quiz Page-Specific Styling */
+#quiz-form fieldset {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: yellowgreen;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #container {
+        margin: 0.5rem;
+    }
+
+    header, section {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section h3 {
+        font-size: 1.2rem;
+    }
+
+    nav ul li {
+        margin: 0.5rem; /* Tighter spacing */
+    }
+
+    nav ul li a {
+        padding: 0.5rem;
+    }
+}
