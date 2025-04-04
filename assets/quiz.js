@@ -35,9 +35,9 @@ function checkAnswers() {
     // This code is designated to show whether particpant passed or failed 
     resultMessage += `<br><strong>Your total score: ${score} out of ${totalQuestions}</strong><br>`;
     if (score >= 2) {
-        resultMessage += "You are so smart and have passed this quiz!<br>";
+        resultMessage += "You are so smart and have passed this quiz! Awesome Sauce! <br>";
     } else {
-        resultMessage += "You failed but don't give up and try again!<br>";
+        resultMessage += "You failed but don't give up and try again! My Freind! <br>";
     }
 
     document.getElementById('result').innerHTML = resultMessage;
