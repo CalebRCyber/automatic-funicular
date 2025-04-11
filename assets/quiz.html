@@ -7,33 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-         <h1> Quiz - Test Your Knowledge! </h1>
-            
-     <header>
-            <h1> Examination: Web Application Security Assessment</h1>
-            <nav>
-                <ul>
-                            <!-- This is the links page that I had to use w3schools as a reference for everything-->
+    <h1> Quiz - Test Your Knowledge! </h1>
 
-                    <li><a href="https://calebrcyber.github.io/automatic-funicular/index.html">Home</a></li>
-
-                     <li><a href="topic1.html"> Topic 1: Home - API Examination of Web Cyber Security</a></li>
-                    
-                    <li><a href="topic2.html">Topic 2: Firewalls in Web Application Security</a></li>
-
-                     <li><a href="https://calebrcyber.github.io/automatic-funicular/assets/topic3.html">Topic 3: Secure Development Practices for Web Applications	</a></li>
-
-                    <li><a href="https://calebrcyber.github.io/automatic-funicular/assets/quiz.html"> Quiz: Test Your Knowledge</a></li>
-                    
-                    <li><a href="resources.html">References</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <h1> Examination: Web Application Security Assessment</h1>
+        <nav>
+            <ul>
+                <li><a href="https://calebrcyber.github.io/automatic-funicular/index.html">Home</a></li>
+                <li><a href="topic1.html">Topic 1: API Examination of Web Cyber Security</a></li>
+                <li><a href="topic2.html">Topic 2: Firewalls in Web Application Security</a></li>
+                <li><a href="https://calebrcyber.github.io/automatic-funicular/assets/topic3.html">Topic 3: Secure Development Practices for Web Applications</a></li>
+                <li><a href="https://calebrcyber.github.io/automatic-funicular/assets/quiz.html">Quiz: Test Your Knowledge</a></li>
+                <li><a href="resources.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <form id="quiz-form">
-    <!-- Question 1: This is a multiple choice question that deals with  WPA firewall-->
+        <!-- Question 1 -->
         <fieldset>
-            <legend>1. What is the primary purpose of a web application firewall ? Please review the web pages if needed!</legend>
+            <legend>1. What is the primary purpose of a web application firewall? Please review the web pages if needed!</legend>
             <input type="radio" id="q1a" name="q1" value="0">
             <label for="q1a">To encrypt user data</label><br>
             <input type="radio" id="q1b" name="q1" value="1">
@@ -44,7 +37,7 @@
             <label for="q1d">To monitor server performance</label><br>
         </fieldset>
 
-        <!-- Question 2: This question has to do with web applications -->
+        <!-- Question 2 -->
         <fieldset>
             <legend>2. Which of the following are types of attacks that web applications are vulnerable to? Please take your time!</legend>
             <input type="checkbox" id="q2a" name="q2" value="1">
@@ -57,11 +50,10 @@
             <label for="q2d">Cross-Site Request Forgery (CSRF)</label><br>
         </fieldset>
 
-        <!-- Question 3: This questions has to do with web application security -->
-        <!-- This will end the quiz section of this page -->
+        <!-- Question 3 -->
         <fieldset>
             <legend>3. The process of ensuring that only authenticated and authorized users can access a web application is called ____________. Please take your time!</legend>
-            <input type="text" id="q3" name="q3" placeholder="Type your answer here">
+            <input type="text" id="q3" name="q3" placeholder="Type your answer here" aria-label="Authentication and Authorization">
         </fieldset>
 
         <br>
@@ -74,4 +66,3 @@
     <script src="quiz.js"></script>
 </body>
 </html>
-
