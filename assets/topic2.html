@@ -5,92 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Topic 2: Web Development Tools and Frameworks</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add responsive styles for small devices */
+        @media only screen and (max-width: 600px) {
+            body {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            nav ul {
+                padding-left: 0;
+                list-style: none;
+            }
+            nav ul li {
+                margin-bottom: 10px;
+            }
+            nav ul li a {
+                text-decoration: none;
+                color: #333;
+            }
+            section {
+                padding: 10px;
+            }
+            footer {
+                font-size: 12px;
+                text-align: center;
+                padding: 10px;
+            }
+        }
+
+        /* Adjustments for medium screens (tablets) */
+        @media only screen and (min-width: 600px) and (max-width: 1024px) {
+            body {
+                font-size: 16px;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="container">
-        <!-- Header with Navigation for Caleb -->
+        <!-- Header with Navigation -->
         <header>
-            <h1>Topic 2: Topic 2: Firewalls in Web Application Security</h1>
+            <h1>Topic 2: Firewalls in Web Application Security</h1>
             <nav>
                 <ul>
                     <li><a href="https://calebrcyber.github.io/automatic-funicular/index.html">Home Page for Web Application Security </a></li>
                     <li><a href="topic1.html">Topic 1: API - Examination of Web Cyber Security</a></li>
-
-                    <li><a href="https://calebrcyber.github.io/automatic-funicular/assets/topic3.html">Topic 3: Secure Development Practices for Web Applications	</a></li>
-
+                    <li><a href="https://calebrcyber.github.io/automatic-funicular/assets/topic3.html">Topic 3: Secure Development Practices for Web Applications</a></li>
                     <li><a href="resources.html">References</a></li>
                 </ul>
             </nav>
         </header>
 
-        <!-- My main content will be in this section CJR-->
+        <!-- Main content section -->
         <section>
             <h2>Introduction to Topic 2: Firewalls in Web Application Security</h2>
-            <p> 
-                The implementation of firewalls is a proven cyber security measure that must be taken for any organization 
-                to practice within the confides of the CIA triad which applies to web development. This is a critical component
-                of web appplicaiton securty due to the purpose of providing a barrier between trusted
-                internal networks and untrusted external traffic that comes through the internet. The benefits of firewalls
-                surpass the protocols of blocking malicious traffic that prevents security threats from incidents such as data breaches.
-                This protocol reduces the possibility of SQL injection, cross-site scripting, denial of service attacks, and 
-                unauthorized access attempts. 
+            <p>
+                The implementation of firewalls is a proven cybersecurity measure that must be taken for any organization
+                to practice within the confines of the CIA triad, which applies to web development. This is a critical component
+                of web application security due to the purpose of providing a barrier between trusted internal networks and
+                untrusted external traffic that comes through the internet. The benefits of firewalls surpass the protocols of
+                blocking malicious traffic that prevents security threats from incidents such as data breaches.
             </p>
-        <!-- My key features section CJR-->
 
-            <h3>Key Features of Web Development firewalls: </h3>
+            <!-- Key Features of Firewalls -->
+            <h3>Key Features of Web Development Firewalls</h3>
             <ul>
-                        <!-- Network Firewall section-->
-
-                <li>Network Firewalls</li>
-                <P>  This crucial protcol serves as a security system that monitors incoming and outgoing network
-                traffic that is based on established security protocols. When it comes to the nature of web development
-                this stage of security is often the first line of defense that prevents unathorized access. The main categories of 
-                network firewalls is the protocols of packet filtering, stateful inspection, access control lists, and intrusion detection.
-                </P>
-                        <!-- Content on web application firewalls CJR-->
-
-                <li>Web Application Firewalls (WAFs) in Web Development:</li>
+                <li><strong>Network Firewalls</strong></li>
+                <p>This crucial protocol serves as a security system that monitors incoming and outgoing network traffic based on established security protocols.</p>
                 
-                <P>  This security tool is essential for the protection of web applications and APIs from critical threats that 
-                come through online vulnerabilites. The WAF operates as the application layer of the OSI model that examines
-                HTTP and HTTPS traffic by detecting suspicious activity. The main operation of WAF is to promote traffic inspection and threat
-                detection that every web site application should implement.</P>
-                
-                <li> Common Threats of Web Application development:   </li>
-                <p>    There are numerous cyber threats to be aware in the process and implementation of web 
-                applications. One of the most common threats relates to the input validation and sanitization that 
-                refers to the user input category such as form fields, URL parameters, and API requests. The threat of SQL injection, Cross-Site Scripting,
-                and command injection attacks is a direct result of poor input validation and sanitization. 
-                    </p>
+                <li><strong>Web Application Firewalls (WAFs)</strong></li>
+                <p>This security tool is essential for the protection of web applications and APIs from critical threats that come through online vulnerabilities.</p>
+
+                <li><strong>Common Threats in Web Application Development</strong></li>
+                <p>There are numerous cyber threats to be aware of, including SQL injection, Cross-Site Scripting, and command injection attacks, often caused by poor input validation.</p>
             </ul>
-        <!-- My section on popular firewalls CJR-->
 
-            <h3>Popular Firewall Softwares for Web Application: </h3>
-            <p> The purpose of web application firewalls is to protect against unathorized access attacks 
-            and there are certain softwares to be aware which includes the web applicaiton firewalls, cloud based firewalls, 
-            and network based firewalls. Each component will be broken down in their simplest forms below.</p>
+            <!-- Popular Firewall Software -->
+            <h3>Popular Firewall Softwares for Web Applications</h3>
             <ul>
-                        <!-- My main content on cloud based WAF CJR-->
-
-                <li>Cloud-Based WAFs</li>
-                <p>    Vendors such as AWS WAF is an essential application tool that protects web apps hosted on AWS
-                which integrates with CloudFront and API Gateway protocols. The tool of Cloudflare WAF is another reliable
-                    software that provides DDoS protection, bot mitigation, and OWASP rules. These softwares are strong examples
-                    of cloud based firewalls that provide an effective risk mitigation strucure for web applications. 
-                 </p>
-                <li>Software-Based (Host-Based) WAFs (Self-Hosted, Customizable)</li>
-                <p>   Sofwares such as ModSecurity, NAXSI, and Imperva WAF are reliable softwares that fosues on host based website applications.
-                   These softwars allow custom security configurtations but require manual updaates and maintance which is best
-                    suied for hybrid cloud and on-premises deployments.
-                </p>
-                <li>Network Firewalls (Protecting Networks & Servers)</li>
-                <p>   This is a traditional packet filtering firewall that controls inbound and outbound traffic through 
-                web applications that are defined with next gneration firewalls that add intrusion detection, deep packet inspection,
-                and AI based security.</p>
+                <li><strong>Cloud-Based WAFs</strong></li>
+                <p>Vendors like AWS WAF and Cloudflare WAF provide protection, including DDoS mitigation and bot detection.</p>
+                
+                <li><strong>Software-Based (Host-Based) WAFs</strong></li>
+                <p>Tools like ModSecurity, NAXSI, and Imperva WAF allow customizable security configurations, suitable for hybrid cloud and on-premises deployments.</p>
+                
+                <li><strong>Network Firewalls</strong></li>
+                <p>This traditional firewall controls inbound and outbound traffic through web applications, adding intrusion detection and deep packet inspection.</p>
             </ul>
         </section>
 
-        <!-- This the footer section -->
+        <!-- Footer section -->
         <footer>
             <p>&copy; 2025 My Web Project Web Application Security</p>
         </footer>
