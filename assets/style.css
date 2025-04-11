@@ -1,37 +1,38 @@
-/* General Page Styling */
+/* Reset and Base Styling */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Added for consistent sizing */
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #ff9800; /* Orange from quiz.html for consistency */
-    color: #333; /* Dark text for readability */
-    line-height: 1.6; /* Improved readability */
+    background-color: #ff9800;
+    color: #333;
+    line-height: 1.6;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Keeps footer at bottom */
+    min-height: 100vh;
 }
 
-/* Grid Layout */
+/* Grid Container */
 #container {
     display: grid;
-    grid-template-rows: auto 1fr auto; /* Header, main, footer */
-    max-width: 1000px; /* Slightly wider for better content fit */
-    margin: 1rem auto; /* Centered with spacing */
+    grid-template-rows: auto 1fr auto;
+    max-width: 1000px;
+    margin: 1rem auto;
     background: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow tweak */
-    border-radius: 8px; /* Rounded corners for modern look */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-/* Header Styling */
+/* Header */
 header {
-    background: yellowgreen; /* Kept your color */
+    background: yellowgreen;
     text-align: center;
-    padding: 2rem; /* More padding for prominence */
-    border-bottom: 2px solid #333; /* Visual separation */
+    padding: 2rem;
+    border-bottom: 2px solid #333;
 }
 
 header h1 {
@@ -40,51 +41,52 @@ header h1 {
 }
 
 header h1:nth-child(2) {
-    color: blue; /* From your inline style */
+    color: blue;
 }
 
 header p {
-    color: red; /* From your inline style */
+    color: red;
     font-size: 1.2rem;
 }
 
-/* Navigation Menu - Consistent across pages */
+/* Navigation Bar */
 nav {
-    background-color: #333; /* Moved from ul to nav for full coverage */
-    padding: 1rem 0; /* Vertical padding */
+    background-color: #333;
+    padding: 1rem 0;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Wraps on smaller screens */
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 0 1rem; /* Adjusted spacing */
+    margin: 0 1rem;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    padding: 0.75rem 1rem; /* Slightly larger clickable area */
+    padding: 0.75rem 1rem;
     display: inline-block;
-    font-weight: bold; /* Bolder links */
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
     background-color: yellowgreen;
-    border-radius: 5px;
 }
 
-/* Main Section */
+/* Main Content */
 section {
-    padding: 2rem; /* Consistent padding */
+    padding: 2rem;
 }
 
 section img {
-    max-width: 100%; /* Responsive image */
+    max-width: 100%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 1rem;
@@ -104,7 +106,13 @@ section p {
     margin-bottom: 1rem;
 }
 
-/* Table Styling */
+/* Highlight Term Class Example */
+.important-term {
+    font-weight: bold;
+    color: darkgreen;
+}
+
+/* Table */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -123,10 +131,10 @@ th {
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9; /* Light gray for readability */
+    background-color: #f9f9f9;
 }
 
-/* Table of Contents List */
+/* Table of Contents */
 section ul {
     list-style: none;
     padding-left: 0;
@@ -143,7 +151,7 @@ section ul a {
 }
 
 section ul a:hover {
-    color: yellowgreen; /* Matches nav hover */
+    color: yellowgreen;
 }
 
 /* Footer */
@@ -151,11 +159,11 @@ footer {
     background: yellowgreen;
     text-align: center;
     padding: 1rem;
-    margin-top: auto; /* Sticks to bottom */
-    border-top: 2px solid #333; /* Visual separation */
+    margin-top: auto;
+    border-top: 2px solid #333;
 }
 
-/* Quiz Page-Specific Styling */
+/* Quiz Page Form */
 #quiz-form fieldset {
     background: white;
     padding: 1rem;
@@ -172,6 +180,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -201,7 +210,7 @@ button:hover {
     }
 
     nav ul li {
-        margin: 0.5rem; /* Tighter spacing */
+        margin: 0.5rem;
     }
 
     nav ul li a {
