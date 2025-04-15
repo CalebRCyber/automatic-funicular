@@ -15,7 +15,7 @@ body {
     min-height: 100vh;
 }
 
-/* Grid Container */
+/* Grid Container this should be good for the grid! */
 #container {
     display: grid;
     grid-template-rows: auto 1fr auto;
