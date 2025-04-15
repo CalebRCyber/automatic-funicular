@@ -9,26 +9,84 @@
 <body>
     <div id="container">
 
-        <header>
-            <h1>IT 3203 Web Project Milestone on Web Application Security </h1>
-            <nav>
-                <ul>
-                    <!-- Fixed home link -->
-                    
-                    <li><a href="https://calebrcyber.github.io/automatic-funicular/index.html">Home Page for Web Application Security </a></li>
+        /* Header */
+header {
+    background: yellowgreen;
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 2px solid #333;
+}
 
-                    <li><a href="topic1.html">Topic 1: API Examination of Web Cyber Security</a></li>
-                    
-                    <li><a href="topic2.html">Topic 2: Firewalls in Web Application Security</a></li>
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
 
-                    <li><a href="topic3.html">Topic 3: Secure Development Practices for Web Applications</a></li>
+header h1:nth-child(2) {
+    color: blue;
+}
 
-                    <li><a href="quiz.html">Quiz: Test Your Knowledge</a></li>
-                    
-                    <li><a href="resources.html">References</a></li>
-                </ul>
-            </nav>
-        </header>
+header p {
+    color: red;
+    font-size: 1.2rem;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.75rem 1rem;
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: yellowgreen;
+}
+
+/* Main Content */
+section {
+    padding: 2rem;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+section h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+section p {
+    margin-bottom: 1rem;
+}
         
         <header>
             <!-- Page title and welcome -->
