@@ -8,10 +8,10 @@ function checkAnswers() {
         const selected = document.querySelector(`input[name="${questionId}"]:checked`);
         if (selected && selected.id === correctOptionId) {
             score++;
-            return `Q${questionId.slice(1)}: ✅ Correct<br>`;
+            return `Q${questionId.slice(1)}: Correct<br>`;
         } else {
             const correctLabel = document.querySelector(`label[for="${correctOptionId}"]`).innerText;
-            return `Q${questionId.slice(1)}: ❌ Incorrect — Correct Answer: ${correctLabel}<br>`;
+            return `Q${questionId.slice(1)}: Incorrect — Correct Answer: ${correctLabel}<br>`;
         }
     }
 
@@ -24,18 +24,18 @@ function checkAnswers() {
     const q2IsCorrect = q2Selected.length === q2Correct.length && q2Selected.every(id => q2Correct.includes(id));
     if (q2IsCorrect) {
         score++;
-        resultMessage += "Q2: ✅ Correct<br>";
+        resultMessage += "Q2: Correct<br>";
     } else {
-        resultMessage += "Q2: ❌ Incorrect — Correct Answers: SQL Injection, Cross-Site Scripting (XSS), CSRF<br>";
+        resultMessage += "Q2: Incorrect — Correct Answers: SQL Injection, Cross-Site Scripting (XSS), CSRF<br>";
     }
 
     // Question 3 (fill in the blank)
     const q3Answer = document.getElementById('q3').value.trim().toLowerCase();
     if (q3Answer === "authorization") {
         score++;
-        resultMessage += "Q3: ✅ Correct<br>";
+        resultMessage += "Q3: Correct<br>";
     } else {
-        resultMessage += "Q3: ❌ Incorrect — Correct Answer: Authorization<br>";
+        resultMessage += "Q3: Incorrect — Correct Answer: Authorization<br>";
     }
 
     // Question 4 (new MCQ)
@@ -50,9 +50,9 @@ function checkAnswers() {
     // Final score summary
     resultMessage += `<br><strong>Your total score: ${score} out of ${totalQuestions}</strong><br>`;
     if (score >= 4) {
-        resultMessage += "🎉 You passed the quiz — Great job, Web Security Champ! 💪<br>";
+        resultMessage += "You passed the quiz — Great job, Web Security Champ!<br>";
     } else {
-        resultMessage += "😓 You didn't pass — but don't worry, review the material and try again!<br>";
+        resultMessage += "You didn't pass — but don't worry, review the material and try again!<br>";
     }
 
     document.getElementById('result').innerHTML = resultMessage;
