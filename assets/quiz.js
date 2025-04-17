@@ -1,39 +1,74 @@
 function checkAnswers() {
     // Collect answers
     let score = 0;
-    let totalQuestions = 5; // Updated to match the number of questions
+    let totalQuestions = 5; // Total number of questions
 
-    // Check Question 1
-    if (document.querySelector('input[name="q1"]:checked') && document.querySelector('input[name="q1"]:checked').value === "1") {
-        score++;
+    let resultText = '';
+    let feedbackText = '';
+    let answerFeedback = '';
+
+    // Question 1
+    const q1Answer = document.querySelector('input[name="q1"]:checked');
+    if (q1Answer) {
+        if (q1Answer.value === "1") {
+            score++;
+            answerFeedback += `<p>1. What is the primary purpose of a web application firewall? <br><b>Your answer: ${q1Answer.nextSibling.textContent.trim()}</b> <span style="color: green;">Correct!</span></p>`;
+        } else {
+            answerFeedback += `<p>1. What is the primary purpose of a web application firewall? <br><b>Your answer: ${q1Answer.nextSibling.textContent.trim()}</b> <span style="color: red;">Incorrect. Correct answer: To prevent unauthorized access to web applications.</span></p>`;
+        }
     }
 
-    // Check Question 2 (multiple correct answers)
-    if (document.querySelector('input[name="q2a"]:checked')) score++;
-    if (document.querySelector('input[name="q2c"]:checked')) score++;
-    if (document.querySelector('input[name="q2d"]:checked')) score++;
+    // Question 2 (multiple correct answers)
+    let q2Score = 0;
+    const q2a = document.getElementById('q2a');
+    const q2c = document.getElementById('q2c');
+    const q2d = document.getElementById('q2d');
+    
+    if (q2a.checked) q2Score++;
+    if (q2c.checked) q2Score++;
+    if (q2d.checked) q2Score++;
 
-    // Check Question 3 (fill-in-the-blank)
-    let q3Answer = document.getElementById('q3').value.trim().toLowerCase();
+    if (q2Score === 3) {
+        score++;
+        answerFeedback += `<p>2. Which of the following are types of attacks that web applications are vulnerable to? <br><b>Your answer: SQL Injection, Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF)</b> <span style="color: green;">Correct!</span></p>`;
+    } else {
+        answerFeedback += `<p>2. Which of the following are types of attacks that web applications are vulnerable to? <br><b>Your answer: ${
+            q2a.checked ? 'SQL Injection, ' : ''
+        }${q2c.checked ? 'Cross-Site Scripting (XSS), ' : ''}${q2d.checked ? 'Cross-Site Request Forgery (CSRF)' : ''}</b> <span style="color: red;">Incorrect. Correct answer: SQL Injection, Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF)</span></p>`;
+    }
+
+    // Question 3 (fill-in-the-blank)
+    const q3Answer = document.getElementById('q3').value.trim().toLowerCase();
     if (q3Answer === "authentication and authorization") {
         score++;
+        answerFeedback += `<p>3. The process of ensuring that only authenticated and authorized users can access a web application is called ____________. <br><b>Your answer: ${q3Answer}</b> <span style="color: green;">Correct!</span></p>`;
+    } else {
+        answerFeedback += `<p>3. The process of ensuring that only authenticated and authorized users can access a web application is called ____________. <br><b>Your answer: ${q3Answer}</b> <span style="color: red;">Incorrect. Correct answer: Authentication and Authorization</span></p>`;
     }
 
-    // Check Question 4
-    if (document.querySelector('input[name="q4"]:checked') && document.querySelector('input[name="q4"]:checked').value === "1") {
-        score++;
+    // Question 4
+    const q4Answer = document.querySelector('input[name="q4"]:checked');
+    if (q4Answer) {
+        if (q4Answer.value === "1") {
+            score++;
+            answerFeedback += `<p>4. What is SQL Injection? <br><b>Your answer: ${q4Answer.nextSibling.textContent.trim()}</b> <span style="color: green;">Correct!</span></p>`;
+        } else {
+            answerFeedback += `<p>4. What is SQL Injection? <br><b>Your answer: ${q4Answer.nextSibling.textContent.trim()}</b> <span style="color: red;">Incorrect. Correct answer: A type of attack that exploits a vulnerability in a web application's database query mechanism.</span></p>`;
+        }
     }
 
-    // Check Question 5
-    if (document.querySelector('input[name="q5"]:checked') && document.querySelector('input[name="q5"]:checked').value === "1") {
-        score++;
+    // Question 5
+    const q5Answer = document.querySelector('input[name="q5"]:checked');
+    if (q5Answer) {
+        if (q5Answer.value === "1") {
+            score++;
+            answerFeedback += `<p>5. Which of the following is the most secure way to store user passwords in a web application? <br><b>Your answer: ${q5Answer.nextSibling.textContent.trim()}</b> <span style="color: green;">Correct!</span></p>`;
+        } else {
+            answerFeedback += `<p>5. Which of the following is the most secure way to store user passwords in a web application? <br><b>Your answer: ${q5Answer.nextSibling.textContent.trim()}</b> <span style="color: red;">Incorrect. Correct answer: Storing passwords using bcrypt with salt.</span></p>`;
+        }
     }
 
     // Calculate the result
-    let resultText = '';
-    let feedbackText = '';
-
-    // Pass or Fail with Enthusiastic Responses
     if (score === totalQuestions) {
         resultText = `Congratulations! You passed with a perfect score of ${score}/${totalQuestions}.`;
         feedbackText = "Excellent work! You're a Web Security pro!";
@@ -45,17 +80,17 @@ function checkAnswers() {
         feedbackText = "Don't worry, keep learning and trying!";
     }
 
-    // Display the result with enthusiasm
-    document.getElementById('result').innerHTML = `<h2>${resultText}</h2><p>${feedbackText}</p>`;
+    // Display the result with answers and feedback
+    document.getElementById('result').innerHTML = `<h2>${resultText}</h2><p>${feedbackText}</p><hr>${answerFeedback}`;
 }
 
 function resetQuiz() {
     // Reset all radio buttons and checkboxes
     document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(input => input.checked = false);
-    
+
     // Reset text input
     document.getElementById('q3').value = '';
-    
+
     // Clear the result
     document.getElementById('result').innerHTML = '';
 }
