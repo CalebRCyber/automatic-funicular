@@ -1,45 +1,51 @@
 function checkAnswers() {
+    // Collect answers
     let score = 0;
-    const totalQuestions = 5;
-    let resultText = "";
+    let totalQuestions = 4; // Adjust this based on the number of questions
 
-    // Check answers for each question
-    // Question 1
-    if (document.getElementById("q1b").checked) {
+    // Check Question 1
+    if (document.querySelector('input[name="q1"]:checked') && document.querySelector('input[name="q1"]:checked').value === "1") {
         score++;
     }
 
-    // Question 2 (checkboxes)
-    if (document.getElementById("q2a").checked) score++;
-    if (document.getElementById("q2c").checked) score++;
-    if (document.getElementById("q2d").checked) score++;
+    // Check Question 2 (multiple correct answers)
+    if (document.querySelector('input[name="q2a"]:checked')) score++;
+    if (document.querySelector('input[name="q2c"]:checked')) score++;
+    if (document.querySelector('input[name="q2d"]:checked')) score++;
 
-    // Question 3 (fill-in-the-blank)
-    if (document.getElementById("q3").value.toLowerCase() === "authentication and authorization") {
+    // Check Question 3 (fill-in-the-blank)
+    let q3Answer = document.getElementById('q3').value.trim().toLowerCase();
+    if (q3Answer === "authentication and authorization") {
         score++;
     }
 
-    // Question 4
-    if (document.getElementById("q4b").checked) {
-        score++;
+    // Calculate the result
+    let resultText = '';
+    let feedbackText = '';
+
+    // Pass or Fail with Enthusiastic Responses
+    if (score === totalQuestions) {
+        resultText = `Congratulations! You passed with a perfect score of ${score}/${totalQuestions}.`;
+        feedbackText = "Excellent work! You're a Web Security pro!";
+    } else if (score >= totalQuestions / 2) {
+        resultText = `Well done! You scored ${score}/${totalQuestions}.`;
+        feedbackText = "Great job! You're on the right track!";
+    } else {
+        resultText = `Oops! You scored ${score}/${totalQuestions}.`;
+        feedbackText = "Don't worry, keep learning and trying!";
     }
 
-    // Question 5
-    if (document.getElementById("q5c").checked) {
-        score++;
-    }
-
-    // Determine pass/fail based on score
-    const passFail = score / totalQuestions >= 0.8 ? "Pass" : "Fail";
-
-    resultText = `Your Score: ${score} / ${totalQuestions} (${passFail})`;
-
-    // Display result
-    document.getElementById("result").innerHTML = resultText;
+    // Display the result with enthusiasm
+    document.getElementById('result').innerHTML = `<h2>${resultText}</h2><p>${feedbackText}</p>`;
 }
 
 function resetQuiz() {
-    document.getElementById("quiz-form").reset();
-    document.getElementById("result").innerHTML = "";
+    // Reset all radio buttons and checkboxes
+    document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(input => input.checked = false);
+    
+    // Reset text input
+    document.getElementById('q3').value = '';
+    
+    // Clear the result
+    document.getElementById('result').innerHTML = '';
 }
-
