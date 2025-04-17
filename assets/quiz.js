@@ -39,13 +39,13 @@ function checkAnswers() {
     }
 
     // Question 4: Evaluate if the correct option is selected
-    resultMessage += evaluateMCQ("q4", "q4b"); // Check Q4
+    resultMessage += evaluateMCQ("q4", "q4a"); // Correct the value for Q4
 
     // Question 5: Evaluate if the correct option is selected
-    resultMessage += evaluateMCQ("q5", "q5d"); // Check Q5
+    resultMessage += evaluateMCQ("q5", "q5b"); // Correct the value for Q5
 
     // Question 6: Evaluate if the correct option is selected
-    resultMessage += evaluateMCQ("q6", "q6c"); // Check Q6
+    resultMessage += evaluateMCQ("q6", "q6c"); // Correct the value for Q6
 
     // Final feedback on the score
     resultMessage += `<br><strong>Your total score: ${score} out of ${totalQuestions}</strong><br>`;
@@ -62,4 +62,3 @@ function checkAnswers() {
 function resetQuiz() {
     document.getElementById('quiz-form').reset();
     document.getElementById('result').innerHTML = '';
-}
