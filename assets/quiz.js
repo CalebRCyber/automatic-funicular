@@ -1,10 +1,10 @@
 function checkAnswers() {
     let score = 0;
-    const totalQuestions = 6;
+    const totalQuestions = 6; // Keep it as 6 as you've 6 questions
     let resultMessage = "Your Results:<br><br>";
 
     // Helper to mark correct/incorrect and show the correct answer if wrong
-    function evaluateMCQ(questionId, correctOptionId, labelText) {
+    function evaluateMCQ(questionId, correctOptionId) {
         const selected = document.querySelector(`input[name="${questionId}"]:checked`);
         if (selected && selected.id === correctOptionId) {
             score++;
@@ -19,8 +19,8 @@ function checkAnswers() {
     resultMessage += evaluateMCQ("q1", "q1b");
 
     // Question 2 (multi-answer: must select all correct, none wrong)
-    const q2Correct = ["q2a", "q2c", "q2d"];
-    const q2Selected = ["q2a", "q2b", "q2c", "q2d"].filter(id => document.getElementById(id).checked);
+    const q2Correct = ["q2a", "q2c", "q2d"]; // Correct answers
+    const q2Selected = ["q2a", "q2b", "q2c", "q2d"].filter(id => document.getElementById(id).checked); // User's selections
     const q2IsCorrect = q2Selected.length === q2Correct.length && q2Selected.every(id => q2Correct.includes(id));
     if (q2IsCorrect) {
         score++;
@@ -39,13 +39,13 @@ function checkAnswers() {
     }
 
     // Question 4 (new MCQ)
-    resultMessage += evaluateMCQ("q4", "q4c");
+    resultMessage += evaluateMCQ("q4", "q4a");  // Correct answer for HTTPS is q4a
 
     // Question 5 (new MCQ)
-    resultMessage += evaluateMCQ("q5", "q5a");
+    resultMessage += evaluateMCQ("q5", "q5b");  // Correct answer for input validation is q5b
 
     // Question 6 (new MCQ)
-    resultMessage += evaluateMCQ("q6", "q6b");
+    resultMessage += evaluateMCQ("q6", "q6c");  // Correct answer for secure dev practice is q6c
 
     // Final score summary
     resultMessage += `<br><strong>Your total score: ${score} out of ${totalQuestions}</strong><br>`;
