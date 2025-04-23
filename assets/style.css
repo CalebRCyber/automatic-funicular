@@ -1,12 +1,10 @@
-
-/* Reset margins, padding, and use consistent box-sizing this is important for margins */
+/* Reset and Base Styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Base font and layout setup for my website so that it looks cohesive */
 body {
     font-family: Arial, sans-serif;
     background-color: #ff9800;
@@ -17,7 +15,7 @@ body {
     min-height: 100vh;
 }
 
-/* Layout Container: This is very cruical step that uses CSS Grid to structure page. Used W3Schools */
+/* Grid Container this should be good for the grid! */
 #container {
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -29,7 +27,7 @@ body {
     overflow: hidden;
 }
 
-/* Header Section of my website*/
+/* Header */
 header {
     background: yellowgreen;
     text-align: center;
@@ -51,7 +49,7 @@ header p {
     font-size: 1.2rem;
 }
 
-/* Navigation Bar for my website regarding Web Security */
+/* Navigation Bar */
 nav {
     background-color: #333;
     padding: 1rem 0;
@@ -82,7 +80,7 @@ nav ul li a:hover {
     background-color: yellowgreen;
 }
 
-/* Main Content Section to creating even spacing of my website*/
+/* Main Content */
 section {
     padding: 2rem;
 }
@@ -108,15 +106,13 @@ section p {
     margin-bottom: 1rem;
 }
 
-/* Class to highlight important terminology regarding web application security*/
+/* Highlight Term Class Example */
 .important-term {
     font-weight: bold;
     color: darkgreen;
 }
 
-/* 
-   Table Styling code that I used w3Schools to learn how to implement
-   */
+/* Table */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -138,9 +134,7 @@ tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-/* 
-   Table of Contents Links for the styling of my website 
-    */
+/* Table of Contents */
 section ul {
     list-style: none;
     padding-left: 0;
@@ -160,9 +154,7 @@ section ul a:hover {
     color: yellowgreen;
 }
 
-/* 
-   Footer code is important for the background that I have chosen */
-
+/* Footer */
 footer {
     background: yellowgreen;
     text-align: center;
@@ -171,8 +163,7 @@ footer {
     border-top: 2px solid #333;
 }
 
-/* Quiz Form Styles for the testing portion of my website. This was challenging 
-and took several attempts */
+/* Quiz Page Form */
 #quiz-form fieldset {
     background: white;
     padding: 1rem;
@@ -196,45 +187,12 @@ button:hover {
     background-color: yellowgreen;
 }
 
-/* 
-   Responsive Design - Media Queries - This is for project milestone 3 requirements
-Very challengeing but after using sources from w3Schols it works! tested it through iphone and tablet
-   */
-
-/* this is for large (Desktops > 1200px) */
-
-@media (min-width: 1200px) {
-    header h1 {
-        font-size: 3rem;
-    }
-    section {
-        padding: 3rem;
-    }
-}
-
-/* Medium Devices (Tablets and small laptops) Which I was able to test!*/
-@media (max-width: 900px) {
-    header h1 {
-        font-size: 2.2rem;
-    }
-    section h2 {
-        font-size: 1.6rem;
-    }
-    nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-/* Small Devices (Phones and small tablets) Very useful source from W3Schools helped me out */
+/* Responsive Design */
 @media (max-width: 600px) {
-   
     #container {
         margin: 0.5rem;
     }
 
-    /* Adjust padding and font sizes for small devices that gain access to my website */
     header, section {
         padding: 1rem;
     }
@@ -251,24 +209,11 @@ Very challengeing but after using sources from w3Schols it works! tested it thro
         font-size: 1.2rem;
     }
 
-    /* Stack navigation vertically very useful source from W3Schools*/
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
     nav ul li {
-        margin: 0.5rem 0;
+        margin: 0.5rem;
     }
 
     nav ul li a {
         padding: 0.5rem;
-    }
-
-    /* Make tables scrollable horizontally and it helps for mobile phones, used W3Schools*/
-    table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
     }
 }
