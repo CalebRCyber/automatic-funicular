@@ -187,7 +187,8 @@ button:hover {
     background-color: yellowgreen;
 }
 
-/* Responsive Design */
+/* Responsive Design  for mobile phones. 
+This was successfuly tested on my Iphone*/
 @media (max-width: 600px) {
     #container {
         margin: 0.5rem;
@@ -218,7 +219,8 @@ button:hover {
     }
 }
 
-/* Medium Devices (Tablets and small laptops: 601px to 900px) */
+/* Medium Devices (Tablets and small laptops: 601px to 900px) 
+This was successfuly tested on my Ipad*/
 @media (min-width: 601px) and (max-width: 900px) {
     header h1 {
         font-size: 2.2rem;
@@ -239,7 +241,7 @@ button:hover {
     }
 }
 
-/* Large Devices (Desktops and wide screens: 901px and above) */
+/* Large Devices for Desktops and Laptops. Successfuly tested on my lenovo Laptop */
 @media (min-width: 901px) {
     header h1 {
         font-size: 2.8rem;
