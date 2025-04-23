@@ -217,3 +217,44 @@ button:hover {
         padding: 0.5rem;
     }
 }
+
+/* Medium Devices (Tablets and small laptops: 601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+}
+
+/* Large Devices (Desktops and wide screens: 901px and above) */
+@media (min-width: 901px) {
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 2.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1.1rem;
+    }
+}
+
