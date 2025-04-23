@@ -1,12 +1,12 @@
-/* Reset and Base Styling */
-/* Reset margins, padding, and use consistent box-sizing */
+
+/* Reset margins, padding, and use consistent box-sizing this is important for margins */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Base font and layout setup for entire page */
+/* Base font and layout setup for my website so that it looks cohesive */
 body {
     font-family: Arial, sans-serif;
     background-color: #ff9800;
@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
 }
 
-/* Layout Container: uses CSS Grid to structure page */
+/* Layout Container: This is very cruical step that uses CSS Grid to structure page. Used W3Schools */
 #container {
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -29,9 +29,7 @@ body {
     overflow: hidden;
 }
 
-/* ===============================
-   Header Section
-   =============================== */
+/* Header Section of my website*/
 header {
     background: yellowgreen;
     text-align: center;
@@ -53,9 +51,7 @@ header p {
     font-size: 1.2rem;
 }
 
-/* ===============================
-   Navigation Bar
-   =============================== */
+/* Navigation Bar for my website regarding Web Security */
 nav {
     background-color: #333;
     padding: 1rem 0;
@@ -86,9 +82,7 @@ nav ul li a:hover {
     background-color: yellowgreen;
 }
 
-/* ===============================
-   Main Content Section
-   =============================== */
+/* Main Content Section to creating even spacing of my website*/
 section {
     padding: 2rem;
 }
@@ -114,15 +108,15 @@ section p {
     margin-bottom: 1rem;
 }
 
-/* Class to highlight important terminology */
+/* Class to highlight important terminology regarding web application security*/
 .important-term {
     font-weight: bold;
     color: darkgreen;
 }
 
-/* ===============================
-   Table Styling
-   =============================== */
+/* 
+   Table Styling code that I used w3Schools to learn how to implement
+   */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -144,9 +138,9 @@ tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-/* ===============================
-   Table of Contents Links
-   =============================== */
+/* 
+   Table of Contents Links for the styling of my website 
+    */
 section ul {
     list-style: none;
     padding-left: 0;
@@ -166,9 +160,9 @@ section ul a:hover {
     color: yellowgreen;
 }
 
-/* ===============================
-   Footer
-   =============================== */
+/* 
+   Footer code is important for the background that I have chosen */
+
 footer {
     background: yellowgreen;
     text-align: center;
@@ -177,9 +171,8 @@ footer {
     border-top: 2px solid #333;
 }
 
-/* ===============================
-   Quiz Form Styles
-   =============================== */
+/* Quiz Form Styles for the testing portion of my website. This was challenging 
+and took several attempts */
 #quiz-form fieldset {
     background: white;
     padding: 1rem;
@@ -203,12 +196,13 @@ button:hover {
     background-color: yellowgreen;
 }
 
-/* ===============================
-   Responsive Design - Media Queries
-   =============================== */
+/* 
+   Responsive Design - Media Queries - This is for project milestone 3 requirements
+Very challengeing but after using sources from w3Schols it works! tested it through iphone and tablet
+   */
 
-/* Extra Large Devices (Desktops > 1200px) */
-/* Optional: tweak layout spacing or scale up font */
+/* this is for large (Desktops > 1200px) */
+
 @media (min-width: 1200px) {
     header h1 {
         font-size: 3rem;
@@ -218,7 +212,7 @@ button:hover {
     }
 }
 
-/* Medium Devices (Tablets and small laptops) */
+/* Medium Devices (Tablets and small laptops) Which I was able to test!*/
 @media (max-width: 900px) {
     header h1 {
         font-size: 2.2rem;
@@ -233,14 +227,14 @@ button:hover {
     }
 }
 
-/* Small Devices (Phones and small tablets) */
+/* Small Devices (Phones and small tablets) Very useful source from W3Schools helped me out */
 @media (max-width: 600px) {
-    /* Reduce container margin on tiny screens */
+   
     #container {
         margin: 0.5rem;
     }
 
-    /* Adjust padding and font sizes */
+    /* Adjust padding and font sizes for small devices that gain access to my website */
     header, section {
         padding: 1rem;
     }
@@ -257,7 +251,7 @@ button:hover {
         font-size: 1.2rem;
     }
 
-    /* Stack navigation vertically */
+    /* Stack navigation vertically very useful source from W3Schools*/
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -271,7 +265,7 @@ button:hover {
         padding: 0.5rem;
     }
 
-    /* Make tables scrollable horizontally */
+    /* Make tables scrollable horizontally and it helps for mobile phones, used W3Schools*/
     table {
         display: block;
         overflow-x: auto;
