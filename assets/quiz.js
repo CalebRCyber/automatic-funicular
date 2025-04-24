@@ -18,7 +18,7 @@ function checkAnswers() {
         }
     }
 
-    // Question 2 (multiple correct answers)
+    // Question 2 (multiple correct answers) I was able to test it!
     let q2Score = 0;
     const q2a = document.getElementById('q2a');
     const q2c = document.getElementById('q2c');
@@ -37,7 +37,7 @@ function checkAnswers() {
         }${q2c.checked ? 'Cross-Site Scripting (XSS), ' : ''}${q2d.checked ? 'Cross-Site Request Forgery (CSRF)' : ''}</b> <span style="color: red;">Incorrect. Correct answer: SQL Injection, Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF)</span></p>`;
     }
 
-    // Question 3 (fill-in-the-blank)
+    // Question 3 (fill-in-the-blank) successfuly tested! 
     const q3Answer = document.getElementById('q3').value.trim().toLowerCase();
     if (q3Answer === "authentication and authorization") {
         score++;
@@ -46,7 +46,7 @@ function checkAnswers() {
         answerFeedback += `<p>3. The process of ensuring that only authenticated and authorized users can access a web application is called ____________. <br><b>Your answer: ${q3Answer}</b> <span style="color: red;">Incorrect. Correct answer: Authentication and Authorization</span></p>`;
     }
 
-    // Question 4
+    // Question 4 Succesfuly tested !
     const q4Answer = document.querySelector('input[name="q4"]:checked');
     if (q4Answer) {
         if (q4Answer.value === "1") {
@@ -57,7 +57,7 @@ function checkAnswers() {
         }
     }
 
-    // Question 5
+    // Question 5 it works well thanks to w3Schools
     const q5Answer = document.querySelector('input[name="q5"]:checked');
     if (q5Answer) {
         if (q5Answer.value === "1") {
@@ -68,9 +68,9 @@ function checkAnswers() {
         }
     }
 
-    // Calculate the result
+    // Calculate the result this was difficult but it shows calculates 
     if (score === totalQuestions) {
-        resultText = `Congratulations! You passed with a perfect score of ${score}/${totalQuestions}.`;
+        resultText = `Congratulations! You passed with a perfect score and I am so proud of you of ${score}/${totalQuestions}.`;
         feedbackText = "Excellent work! You're a Web Security pro!";
     } else if (score >= totalQuestions / 2) {
         resultText = `Well done! You scored ${score}/${totalQuestions}.`;
@@ -80,12 +80,12 @@ function checkAnswers() {
         feedbackText = "Don't worry, keep learning and trying!";
     }
 
-    // Display the result with answers and feedback
+    // This will display the feedback to the users, it works well 
     document.getElementById('result').innerHTML = `<h2>${resultText}</h2><p>${feedbackText}</p><hr>${answerFeedback}`;
 }
 
 function resetQuiz() {
-    // Reset all radio buttons and checkboxes
+    // Reset operation is really good and it should take the user to reset
     document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(input => input.checked = false);
 
     // Reset text input
