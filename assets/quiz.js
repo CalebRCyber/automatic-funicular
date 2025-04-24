@@ -73,11 +73,11 @@ function checkAnswers() {
         resultText = `Congratulations! You passed with a perfect score and I am so proud of you of ${score}/${totalQuestions}.`;
         feedbackText = "Excellent work! You're a Web Security pro!";
     } else if (score >= totalQuestions / 2) {
-        resultText = `Well done! You scored ${score}/${totalQuestions}.`;
-        feedbackText = "Great job! You're on the right track!";
+        resultText = `Well done! you are really smart and cool ! You scored ${score}/${totalQuestions}.`;
+        feedbackText = "Great job! that is impressive my guy!";
     } else {
         resultText = `Oops! You scored ${score}/${totalQuestions}.`;
-        feedbackText = "Don't worry, keep learning and trying!";
+        feedbackText = "no problem, keep trying and remember to review the website!";
     }
 
     // This will display the feedback to the users, it works well 
