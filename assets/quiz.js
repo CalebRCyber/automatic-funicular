@@ -7,6 +7,8 @@ function checkAnswers() {
     let feedbackText = '';
     let answerFeedback = '';
 
+    // This are the elemetns that are used for this code and each serve a function 
+
     // Question 1
     const q1Answer = document.querySelector('input[name="q1"]:checked');
     if (q1Answer) {
@@ -23,7 +25,7 @@ function checkAnswers() {
     const q2a = document.getElementById('q2a');
     const q2c = document.getElementById('q2c');
     const q2d = document.getElementById('q2d');
-    
+    // I had to use If statements for this code 
     if (q2a.checked) q2Score++;
     if (q2c.checked) q2Score++;
     if (q2d.checked) q2Score++;
@@ -45,7 +47,7 @@ function checkAnswers() {
     } else {
         answerFeedback += `<p>3. The process of ensuring that only authenticated and authorized users can access a web application is called ____________. <br><b>Your answer: ${q3Answer}</b> <span style="color: red;">Incorrect. Correct answer: Authentication and Authorization</span></p>`;
     }
-
+// each answer has a feedback per user input as the code demonstrates above
     // Question 4 Succesfuly tested !
     const q4Answer = document.querySelector('input[name="q4"]:checked');
     if (q4Answer) {
@@ -56,7 +58,7 @@ function checkAnswers() {
             answerFeedback += `<p>4. What is SQL Injection? <br><b>Your answer: ${q4Answer.nextSibling.textContent.trim()}</b> <span style="color: red;">Incorrect. Correct answer: A type of attack that exploits a vulnerability in a web application's database query mechanism.</span></p>`;
         }
     }
-
+// Each answer is carefully examined per answer feedback
     // Question 5 it works well thanks to w3Schools
     const q5Answer = document.querySelector('input[name="q5"]:checked');
     if (q5Answer) {
@@ -67,7 +69,7 @@ function checkAnswers() {
             answerFeedback += `<p>5. Which of the following is the most secure way to store user passwords in a web application? <br><b>Your answer: ${q5Answer.nextSibling.textContent.trim()}</b> <span style="color: red;">Incorrect. Correct answer: Storing passwords using bcrypt with salt.</span></p>`;
         }
     }
-
+// This part deals with the full results of the user input
     // Calculate the result this was difficult but it shows calculates 
     if (score === totalQuestions) {
         resultText = `Congratulations! You passed with a perfect score and I am so proud of you of ${score}/${totalQuestions}.`;
@@ -83,14 +85,14 @@ function checkAnswers() {
     // This will display the feedback to the users, it works well 
     document.getElementById('result').innerHTML = `<h2>${resultText}</h2><p>${feedbackText}</p><hr>${answerFeedback}`;
 }
-
+// the reset function is very important for user feedback as they restart the quiz 
 function resetQuiz() {
     // Reset operation is really good and it should take the user to reset
     document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(input => input.checked = false);
-
+// the getters are essential for user input
     // Reset text input
     document.getElementById('q3').value = '';
-
+// this function below clears the results which helps with operations 
     // Clear the result
     document.getElementById('result').innerHTML = '';
 }
